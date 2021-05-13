@@ -18,4 +18,9 @@ export class DadesService {
     return this.http.get(apiURL);
   }
 
+  getDadesBuscar(){
+    const apiURL = 'https://api.covid19api.com/countries';
+    return this.http.get(apiURL);
+  }
+
 }

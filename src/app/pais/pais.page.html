@@ -10,7 +10,7 @@
 <ion-content>
   <ion-card *ngFor="let p of pais">
     <ion-card-header>
-      <ion-card-title>{{p.Date}}</ion-card-title>
+      <ion-card-title>{{ p.Date | date:'shortDate' }}</ion-card-title>
     </ion-card-header>
    
     <ion-card-content>
