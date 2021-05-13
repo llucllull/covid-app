@@ -8,12 +8,12 @@
 
 <ion-content [fullscreen]="true">
   <ion-card  *ngFor="let p of paisos">
-    <ion-card-content tappable (click)="obrirPais(p.Country)">
+    <ion-card-content tappable (click)="obrirPais(p.Slug)">
       <h1><b>{{p.Country}}</b></h1><br>
       <ion-label><b>Casos totals: </b>{{p.TotalConfirmed}}</ion-label><br>
       <ion-label><b>Morts totals: </b>{{p.TotalDeaths}}</ion-label><br>
       <ion-label><b>Curats totals: </b>{{p.TotalRecovered}}</ion-label>
-      
+      <img style="position: absolute; top: 10px; right: 50px;" src="{{'https://www.countryflags.io/'+p.CountryCode+'/flat/64.png'}}">
     </ion-card-content>
   </ion-card>
 </ion-content>

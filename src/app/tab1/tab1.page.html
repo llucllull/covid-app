@@ -21,6 +21,13 @@
       <ion-label><b>Nous curats:</b> {{global.Global.NewRecovered}}</ion-label><br>
       <ion-label><b>Total curats:</b> {{global.Global.TotalRecovered}}</ion-label>
     </ion-card-content>
+
+    <ion-card-content style="display: block;">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [legend]="barChartLegend" [chartType]="barChartType" 
+      ></canvas>
+    </ion-card-content>
+
   </ion-card>
   
 

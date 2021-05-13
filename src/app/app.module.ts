@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DadesService } from './services/dades.service';
 
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ChartsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DadesService],
   bootstrap: [AppComponent],
 })
