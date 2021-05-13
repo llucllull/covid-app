@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
  
     <ion-searchbar animated placeholder="Cercar país" [(ngModel)]="searchTerm" (ionInput)="searchEventFired()"></ion-searchbar>
-    <ion-list *ngIf="results" tappable (click)="obrirPais(results[0].Country)">
+    <ion-list *ngIf="results" tappable (click)="obrirPais(results[0].Slug)">
       <ion-item>{{ results[0].Country }}</ion-item> 
     </ion-list>
   
