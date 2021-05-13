@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Global
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card  *ngIf="global">
+    <ion-card-header>
+    <ion-card-title><h1><b>Dades Globals Covid-19</b></h1></ion-card-title>
+    <ion-card-subtitle>{{global.Global.Date}}</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-label><b>Nous casos confirmats:</b> {{global.Global.NewConfirmed}}</ion-label><br>
+      <ion-label><b>Total confirmats: </b>{{global.Global.TotalConfirmed}}</ion-label><br>
+      <ion-label><b>Noves morts: </b>{{global.Global.NewDeaths}}</ion-label><br>
+      <ion-label><b>Total morts: </b>{{global.Global.TotalDeaths}}</ion-label><br>
+      <ion-label><b>Nous curats:</b> {{global.Global.NewRecovered}}</ion-label><br>
+      <ion-label><b>Total curats:</b> {{global.Global.TotalRecovered}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+  
+
+
+</ion-content>

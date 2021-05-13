@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" color="#000000" defaultHref="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="pais">{{pais[0].Country}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let p of pais">
+    <ion-card-header>
+      <ion-card-title>{{p.Date}}</ion-card-title>
+    </ion-card-header>
+   
+    <ion-card-content>
+      <ion-label><b>Casos confirmats:</b> {{p.Confirmed}}</ion-label><br>
+      <ion-label><b>Morts confirmades:</b> {{p.Deaths}}</ion-label><br>
+      <ion-label><b>Recuperats confirmats:</b> {{p.Recovered}}</ion-label><br>
+      <ion-label><b>Actius confirmades:</b> {{p.Active}}</ion-label>
+    </ion-card-content>
+    
+  </ion-card>
+  <br>
+</ion-content>

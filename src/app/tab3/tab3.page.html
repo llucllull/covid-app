@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Llistat Països
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card  *ngFor="let p of paisos">
+    <ion-card-content tappable (click)="obrirPais(p.Country)">
+      <h1><b>{{p.Country}}</b></h1><br>
+      <ion-label><b>Casos totals: </b>{{p.TotalConfirmed}}</ion-label><br>
+      <ion-label><b>Morts totals: </b>{{p.TotalDeaths}}</ion-label><br>
+      <ion-label><b>Curats totals: </b>{{p.TotalRecovered}}</ion-label>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
